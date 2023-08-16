@@ -53,6 +53,7 @@ h2 {
 h3 {
   font-size: 2.8rem;
   font-weight: 500;
+  line-height: 1.3;
 }
 
 p {
@@ -447,7 +448,7 @@ a {
   font-size: 3rem;
   font-style: italic;
   color: var(--color-body-darker);
-  line-height: 1.2;
+  line-height: 1.3;
 }
 
 .quote__text::before {
@@ -456,6 +457,20 @@ a {
 
 .quote__text::after {
   content: close-quote;
+}
+
+.quote__author {
+  font-size: 2rem;
+  font-weight: 500;
+  font-style: normal;
+  margin-bottom: 0;
+}
+
+.quote__organization {
+  color: var(--color-headings);
+  opacity: 0.4;
+  font-size: 1.5rem;
+  font-style: normal;
 }
 
 /* Author */
@@ -517,6 +532,11 @@ a {
   padding: 3rem;
 }
 
+.testimonial .quote {
+  margin: 2rem 0;
+  font-size: 110%;
+}
+
 .testimonial__image {
   position: relative;
 }
@@ -531,11 +551,28 @@ a {
   right: -32px;
 }
 
+@media screen and (min-width: 768px) {
+  .testimonial .quote {
+    margin: 5rem 0 0 6rem;
+    font-size: 120%;
+    line-height: 1.5;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .quote {
+    font-size: 2rem;
+  }
+}
+
 /* Callout */
 
 .callout {
   padding: 4rem;
   border-radius: 5px;
+}
+
+.callout-signup {
+  transform: translateY(5rem);
 }
 
 .callout--primary {
@@ -634,13 +671,13 @@ a {
 }
 
 .block--skewed-right {
-  padding-bottom: calc(var(--padding-verttical) + 4rem);
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 95%);
 }
 
 .block--skewed-left {
-  padding-bottom: calc(var(--padding-verttical) + 4rem);
-  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0 0, 100% 0, 100% 90%, 0 95%);
 }
 
 .container {
